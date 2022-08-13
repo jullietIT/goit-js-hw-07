@@ -8,6 +8,9 @@ const galleryList = createGalleryCardsItem(galleryItems);
 gallery.insertAdjacentHTML("beforeend", galleryList);
 
 
+
+
+
  function createGalleryCardsItem(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -27,19 +30,15 @@ gallery.insertAdjacentHTML("beforeend", galleryList);
  }
 
 
-gallery.addEventListener("click",onGalleryLightBoxClick);
+// gallery.addEventListener("click",onGalleryLightBoxClick);
 
- const imgSource = event.target.dataset.source;
+//  const imgSource = event.target.dataset.source;
 
-  const instance = basicLightbox.create(`
-    <img
-    src="${imgSource}"
-    >
-`);
-
-
-
-
+//   const instance = basicLightbox.create(`
+//     <img
+//     src="${imgSource}"
+//     >
+// `);
 
 
 
