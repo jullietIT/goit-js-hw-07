@@ -7,7 +7,6 @@ const gallery = document.querySelector('.gallery');
 const galleryList = createGalleryCardsItem(galleryItems);
 gallery.insertAdjacentHTML("beforeend", galleryList);
 
-
  function createGalleryCardsItem(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -25,3 +24,9 @@ gallery.insertAdjacentHTML("beforeend", galleryList);
     })
 .join("");
  }
+
+
+const galleryLightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
