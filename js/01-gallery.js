@@ -28,3 +28,15 @@ gallery.insertAdjacentHTML("beforeend", galleryList);
 
 
 
+gallery.addEventListener("click", onGalleryClick);
+function onGalleryClick(e) {
+  e.preventDefault();
+  const imgSource = e.target.dataset.source;
+  const instance = basicLightbox.create(`
+    <img
+    src="${imgSource}"
+    >
+`);
+
+  instance.show();
+}
